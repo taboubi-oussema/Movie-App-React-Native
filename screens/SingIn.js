@@ -1,6 +1,6 @@
 import { Text, View, Image, TouchableOpacity, StatusBar } from "react-native";
-
-export default function SigneIn() {
+import { MaterialIcons } from "@expo/vector-icons";
+export default function SigneIn({ navigation }) {
   return (
     <View style={{ flex: 1, backgroundColor: "#000" }}>
       <StatusBar barStyle="light-content" />
@@ -30,16 +30,13 @@ export default function SigneIn() {
             }}
           >
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <Image
-                style={{ width: 20, height: 20, marginRight: 6 }}
-                source={require("../assets/images/translate.png")}
-              />
+              <MaterialIcons name="translate" size={20} color="#fff" />
               <Text
                 style={{
                   fontSize: 12,
                   fontWeight: "400",
                   fontStyle: "normal",
-                  lineHeight: 18,
+
                   color: "#E6E6E6",
                 }}
               >
@@ -124,6 +121,7 @@ export default function SigneIn() {
         }}
       >
         <TouchableOpacity
+          onPress={() => navigation.navigate("ProfileUser")}
           style={{
             width: "100%",
             height: 56,
