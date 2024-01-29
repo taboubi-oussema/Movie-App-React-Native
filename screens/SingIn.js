@@ -121,7 +121,7 @@ export default function SigneIn({ navigation }) {
         }}
       >
         <TouchableOpacity
-          onPress={() => navigation.navigate("ProfileUser")}
+          onPress={() => navigation.navigate("HomeTab")}
           style={{
             width: "100%",
             height: 56,
@@ -143,6 +143,7 @@ export default function SigneIn({ navigation }) {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
+          onPress={() => navigation.navigate("SingUp")}
           style={{
             width: "100%",
             height: 56,

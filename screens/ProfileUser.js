@@ -11,6 +11,7 @@ import {
   SimpleLineIcons,
   Octicons,
 } from "@expo/vector-icons";
+
 export default function ProfileUser({ navigation }) {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
@@ -20,7 +21,7 @@ export default function ProfileUser({ navigation }) {
       <StatusBar />
       <View
         style={{
-          height: "90%",
+          height: "100%",
           borderBottomColor: "grey",
           borderBottomWidth: 2,
           paddingTop: "5%",
@@ -99,10 +100,9 @@ export default function ProfileUser({ navigation }) {
           }}
         >
           <Pressable
-            onPress={() => navigation.navigate("SigneIn")} //fdhuidjshfjdsbfidjsbfjsdkbfjdskbfdskjfbdskjfb,
+            onPress={() => navigation.navigate("SigneIn")}
             style={{
               flexDirection: "row",
-
               height: 50,
               gap: 30,
               width: "90%",
@@ -252,7 +252,6 @@ export default function ProfileUser({ navigation }) {
                 fontSize: 16,
                 fontWeight: "700",
                 fontStyle: "normal",
-
                 color: "#F2F2F2",
               }}
             >
@@ -268,36 +267,7 @@ export default function ProfileUser({ navigation }) {
           />
         </View>
       </View>
-      <View
-        style={{
-          height: "10%",
-          backgroundColor: "#000",
-          justifyContent: "center",
-        }}
-      >
-        <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
-          <View style={{ alignItems: "center", gap: 7 }}>
-            <AntDesign name="home" size={24} color="#fff" />
-            <Text style={{ color: "#fff" }}>Home</Text>
-          </View>
-          <View style={{ alignItems: "center", gap: 7 }}>
-            <MaterialCommunityIcons
-              name="ticket-confirmation"
-              size={24}
-              color="#fff"
-            />
-            <Text style={{ color: "#fff" }}>Ticket</Text>
-          </View>
-          <View style={{ alignItems: "center", gap: 7 }}>
-            <AntDesign name="videocamera" size={24} color="#fff" />
-            <Text style={{ color: "#fff" }}>Movie</Text>
-          </View>
-          <View style={{ alignItems: "center", gap: 7 }}>
-            <Ionicons name="person-sharp" size={24} color="#fff" />
-            <Text style={{ color: "#fff" }}>Profile</Text>
-          </View>
-        </View>
-      </View>
+ 
     </View>
   );
 }
