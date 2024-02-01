@@ -242,11 +242,7 @@ export default function ProfileUser({ navigation }) {
               width: "90%",
             }}
           >
-            <MaterialCommunityIcons
-              name="face-recognition"
-              size={24}
-              color="#fff"
-            />
+            <SimpleLineIcons name="arrow-right" size={24} color="#fff" />
             <Text
               style={{
                 fontSize: 16,
@@ -267,7 +263,6 @@ export default function ProfileUser({ navigation }) {
           />
         </View>
       </View>
- 
     </View>
   );
 }

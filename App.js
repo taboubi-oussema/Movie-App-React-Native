@@ -5,6 +5,7 @@ import SigneIn from "./screens/SingIn";
 import ProfileUser from "./screens/ProfileUser";
 import Username from "./screens/username";
 import SingUp from './screens/SingUp'
+
 import {
   MaterialIcons,
   Ionicons,
@@ -19,6 +20,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { StatusBar } from "react-native";
 import CodeOTP from "./screens/CodeOTP";
 import NowPlaying from "./screens/NowPlaying";
+import HomePage from "./screens/HomePage";
+import Ticket from "./screens/Ticket";
+
+
+
 const Tab = createBottomTabNavigator();
  function HomeTab() {
    return (
@@ -37,7 +43,7 @@ const Tab = createBottomTabNavigator();
        >
          <Tab.Screen
            name="Home"
-           component={NowPlaying}
+           component={HomePage}
            options={{
              tabBarLabel: "Home",
              headerShown: false,
@@ -48,7 +54,7 @@ const Tab = createBottomTabNavigator();
          />
          <Tab.Screen
            name="Ticket"
-           component={Username}
+           component={Ticket}
            options={{
              tabBarLabel: "Ticket",
              headerShown: false,
@@ -63,7 +69,7 @@ const Tab = createBottomTabNavigator();
          />
          <Tab.Screen
            name="Movie"
-           component={Username}
+           component={NowPlaying}
            options={{
              tabBarLabel: "Movie",
              headerShown: false,
@@ -88,20 +94,14 @@ const Tab = createBottomTabNavigator();
    );
  }
 
-
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const Stack = createNativeStackNavigator();
+  
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
-          name="oe"
-          component={NowPlaying}
-          options={{
-            headerShown: false,
-          }}
-        />
+
         <Stack.Screen
           name="SigneIn"
           component={SigneIn}

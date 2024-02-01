@@ -1,6 +1,6 @@
 import { View, Text, StatusBar, Pressable, TextInput, } from "react-native";
 import React from "react";
-
+import styles from "./StyleGlobal";
 export default function Username() {
   return (
     <View style={{ backgroundColor: "#000", flex: 1 }}>
@@ -9,10 +9,10 @@ export default function Username() {
         style={{
           height: "60%",
           marginHorizontal: 20,
-          justifyContent:'space-between'
+          justifyContent: "space-between",
         }}
       >
-        <View style={{ gap: 20}}>
+        <View style={{ gap: 20 }}>
           <Text
             style={{
               fontSize: 32,
@@ -51,27 +51,8 @@ export default function Username() {
           ></TextInput>
         </View>
         <View>
-          <Pressable
-            style={{
-              width: "100%",
-              height: 56,
-              borderRadius: 64,
-              backgroundColor: "#FCC434",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Text
-              style={{
-                fontSize: 20,
-                fontWeight: "600",
-                fontStyle: "normal",
-
-                color: "#000000",
-              }}
-            >
-              Done
-            </Text>
+          <Pressable style={[styles.Buttons, { backgroundColor: "#FCC434" }]}>
+            <Text style={[styles.text, { color: "#000" }]}>Done</Text>
           </Pressable>
         </View>
       </View>

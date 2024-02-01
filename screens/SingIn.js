@@ -1,5 +1,6 @@
 import { Text, View, Image, TouchableOpacity, StatusBar } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
+import styles from "./StyleGlobal";
 export default function SigneIn({ navigation }) {
   return (
     <View style={{ flex: 1, backgroundColor: "#000" }}>
@@ -122,48 +123,18 @@ export default function SigneIn({ navigation }) {
       >
         <TouchableOpacity
           onPress={() => navigation.navigate("HomeTab")}
-          style={{
-            width: "100%",
-            height: 56,
-            borderRadius: 64,
-            backgroundColor: "#FCC434",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          style={[styles.Buttons, { backgroundColor: "#FCC434" }]}
         >
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "700",
-              fontStyle: "normal",
-              color: "#000000",
-            }}
-          >
-            Sing in
-          </Text>
+          <Text style={[styles.text, { color: "#000" }]}>Sing in</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate("SingUp")}
-          style={{
-            width: "100%",
-            height: 56,
-            borderRadius: 64,
-            borderWidth: 1,
-            borderColor: "rgba(242, 242, 242, 1.0)",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          style={[
+            styles.Buttons,
+            { borderColor: "rgba(242, 242, 242, 1.0)", borderWidth: 1 },
+          ]}
         >
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "700",
-              fontStyle: "normal",
-              color: "#F2F2F2",
-            }}
-          >
-            Sing up
-          </Text>
+          <Text style={[styles.text, { color: "#F2F2F2" }]}>Sing up</Text>
         </TouchableOpacity>
 
         <Text
